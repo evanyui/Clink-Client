@@ -22,8 +22,11 @@ $(function() {
     // TODO: Will be replaced by only when user query server/db
     // FOR TESTING
     // When client receive data from server
-    socket.on('receive', function(tags, link) {
-        $('#linklist').append($('<li>').text(link));
+    socket.on('receive', function(tag, link) {
+        $('#linklist').append(
+            $('<li/>').append(
+                $('<a/>').attr({href: link, target: '_blank'})
+                         .text(tag)));
     });
 });
 
