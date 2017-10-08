@@ -17,6 +17,8 @@ $(function() {
 
         // Send tab's address with the tag as a pair to the server
         if(isValidURL(url)) {
+            // Create the room first to see the emitted msg back after post
+            joinRoom($('#tags').val());
             socket.emit('post', $('#tags').val(), url);
         } else {
             //TODO: need better way to present info message
@@ -35,15 +37,19 @@ $(function() {
         // Check if works on other browser
         event.preventDefault();
 
-        // Query to server
+        // Query to server and subscribe to room
         socket.emit('query', $('#query').val(), url);
+        joinRoom($('#query').val());
+
+        // Empty the textfield
+        $('#query').val('');
 
         return false;
     });
 
-    // When client receive data from server
-    // only after client query links to server
-    // query results are sent back in array
+    // When client receive data from server,
+    // happens after client query links to server or when client post link
+    // Query results are sent back in array
     socket.on('receive', function(results) {
         results.forEach(function(res) {
             $('#linklist').append(
@@ -52,6 +58,29 @@ $(function() {
                              .text(res.key)));
         });
     });
+
+    socket.on('subscribe_callback', function(room) {
+        $('#query').attr('alt', room);
+    });
+
+    socket.on('unsubscribe_callback', function(room) {
+        $('#query').attr('alt', "");
+    });
+
+    // Join room function
+    var joinRoom = function(room) {
+        var currentRoom = $('#query').attr('alt'); 
+        // Leave room if subscribed to different room
+        if(currentRoom !== "" && currentRoom !== room) {
+            socket.emit('unsubscribe', currentRoom);
+            $('#linklist').empty();
+        }
+        socket.emit('subscribe', room);
+
+        // Show joined room in placeholder
+        $('#query').attr('placeholder', room);
+    }
+
 });
 
 // Predicate to check if tab address is a url with regex
