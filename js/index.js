@@ -50,8 +50,8 @@ $(function() {
     // When client receive data from server,
     // happens after client query links to server or when client post link
     // Query results are sent back in array
-    socket.on('receive', function(results) {
-        results.forEach(function(res) {
+    socket.on('receive', (results) => {
+        results.forEach((res) => {
             $('#linklist').append(
                 $('<li/>').append(
                     $('<a/>').attr({href: res.url, target: '_blank'})
@@ -59,11 +59,11 @@ $(function() {
         });
     });
 
-    socket.on('subscribe_callback', function(room) {
+    socket.on('subscribe_callback', (room) => {
         $('#query').attr('alt', room);
     });
 
-    socket.on('unsubscribe_callback', function(room) {
+    socket.on('unsubscribe_callback', (room) => {
         $('#query').attr('alt', "");
     });
 
