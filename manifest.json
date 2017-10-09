@@ -5,11 +5,12 @@
     "version": "1.0",
     "manifest_version": 2,
     "permissions": [
-        "tabs"
+        "tabs",
+        "activeTab"
     ],
 
     //recommended
-    "description": "Enable user to share and search link with label query",
+    "description": "Enable user to share and search link with tag query",
     "icons": {
         "19": "images/icon_19.png",
         "38": "images/icon_38.png",
@@ -23,7 +24,7 @@
             "19": "images/icon_19.png",
             "38": "images/icon_38.png"
         },
-        "default_popup": "html/index.html"
+        "default_popup": "popup/popup.html"
     },
 
     //additional
@@ -32,7 +33,11 @@
     
     //Dependencies
     "content_scripts": [{
-        "js": ["js/index.js"],
-        "matches": ["http://*/*", "https://*/*"]
-    }]
+        "js": ["popup/popup.js"],
+        "matches": ["*://*/*"],
+        "run_at": "document_end",
+        "all_frames": true
+    }],
+
+    "web_accessible_resources": ["js/*.js", "html/*.html", "css/*.css"]
 }

@@ -1,20 +1,17 @@
 $(function() {
     // When user clink is opened, user is connected to the server
-    var socket = io.connect('http://localhost:3000');
+    var socket = io.connect('https://localhost:3000');
 
     // Get current tab
-    var url;
-    chrome.tabs.query({'active': true, 'currentWindow': true}, function (tabs) {
-        // Get tab's address
-        url = tabs[0].url;
-    });
+    // tab address is already left in the name attribute of parent iframe
+    var url = window.name;
 
     // When user submit form to post link
     $('#post-form').on('submit', function(event) {
         // TODO: weird bug on html having two submit forms
         // Check if works on other browser
         event.preventDefault();
-
+        
         // Send tab's address with the tag as a pair to the server
         if(isValidURL(url)) {
             // Create the room first to see the emitted msg back after post
