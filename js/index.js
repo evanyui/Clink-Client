@@ -9,7 +9,7 @@ $(function() {
     // When user submit form to post link
     $('#post-form').on('submit', function(event) {
         // TODO: weird bug on html having two submit forms
-        // Check if works on other browser
+        // Need to Check if works on other browser
         event.preventDefault();
 
         // Send tab's address with the tag as a pair to the server
@@ -31,7 +31,7 @@ $(function() {
     // When user submit form to query links
     $('#query-form').on('submit', function(event) {
         // TODO: weird bug on html having two submit forms
-        // Check if works on other browser
+        // Need to Check if works on other browser
         event.preventDefault();
 
         // Query to server and subscribe to room
@@ -81,7 +81,7 @@ $(function() {
 });
 
 // Predicate to check if tab address is a url with regex
-var isValidURL = async function(str) {
+var isValidURL = function(str) {
     var httpRegex = /(http|https):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/; 
     var ipRegex = /(\d+\.\d+\.\d+\.\d+):(\d+)/; 
 
