@@ -11,7 +11,7 @@ $(function() {
         // TODO: weird bug on html having two submit forms
         // Check if works on other browser
         event.preventDefault();
-        
+
         // Send tab's address with the tag as a pair to the server
         if(isValidURL(url)) {
             // Create the room first to see the emitted msg back after post
@@ -52,7 +52,7 @@ $(function() {
             $('#linklist').append(
                 $('<li/>').append(
                     $('<a/>').attr({href: res.url, target: '_blank'})
-                             .text(res.key)));
+                    .text(res.key)));
         });
     });
 
@@ -65,10 +65,10 @@ $(function() {
     });
 
     // Join room function
-    var joinRoom = function(room) {
+    var joinRoom = function(room) { 
         var currentRoom = $('#query').attr('alt'); 
-        // Leave room if subscribed to different room
-        if(currentRoom !== "" && currentRoom !== room) {
+        // Leave room if subscribed to different room 
+        if(currentRoom !== "" && currentRoom !== room) { 
             socket.emit('unsubscribe', currentRoom);
             $('#linklist').empty();
         }
@@ -81,12 +81,27 @@ $(function() {
 });
 
 // Predicate to check if tab address is a url with regex
-var isValidURL = function(str) {
-    var regex = /(http|https):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
-    if(!regex .test(str)) {
-        return false;
-    } else {
+var isValidURL = async function(str) {
+    var httpRegex = /(http|https):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/; 
+    var ipRegex = /(\d+\.\d+\.\d+\.\d+):(\d+)/; 
+
+    if(httpRegex.test(str) || ipRegex.test(str)) {
         return true;
-    }
+    } 
+    return false;
+}
+
+// ** NOT USED, at least not now **
+// We need Local IP, but this gives global IP, chrome extension is not allowed
+// to get local IP
+// Function to request global IP
+var convertIP = async function(str) {
+    var address;
+    await $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
+        function(json) {
+            address = str.replace(/localhost/g, json.ip);
+        }
+    );
+    return address;
 }
 
