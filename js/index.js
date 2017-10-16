@@ -1,6 +1,6 @@
 $(function() {
     // When user clink is opened, user is connected to the server
-    var socket = io.connect('https://localhost:3000');
+    var socket = io.connect('https://10.0.0.132:3000');
 
     // Get current tab
     // tab address is already left in the name attribute of parent iframe
@@ -70,8 +70,8 @@ $(function() {
         // Leave room if subscribed to different room 
         if(currentRoom !== "" && currentRoom !== room) { 
             socket.emit('unsubscribe', currentRoom);
-            $('#linklist').empty();
         }
+        $('#linklist').empty();
         socket.emit('subscribe', room);
 
         // Show joined room in placeholder

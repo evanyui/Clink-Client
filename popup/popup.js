@@ -23,7 +23,7 @@ chrome.tabs.executeScript(
         "} else { " +
             "var clink = document.createElement(\"iframe\"); " +
             "clink.id = \"Clink!\"; " +
-            "clink.src = \"https://localhost:3000\"; " +
+            "clink.src = \"https://10.0.0.132:3000\"; " +
             "clink.name = url; " + 
             "clink.style.cssText = \"" + 
                     "z-index: 2147483647;" +
