@@ -19,7 +19,7 @@ chrome.tabs.executeScript(
                 "var clink = document.getElementById(\"Clink!\"); " +
                 "clink.outerHTML = \"\"; " +
                 "delete clink;" + 
-            "}, 100);" +
+            "}, 10);" +
         "} else { " +
             "var clink = document.createElement(\"iframe\"); " +
             "clink.id = \"Clink!\"; " +
