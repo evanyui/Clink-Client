@@ -2,22 +2,35 @@
 <html>
   <head>
     <title>Clink</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="/css/index.css"></link>
     <script src="/js/socket.io.js"></script>
     <script src="/js/jquery-1.11.1.js"></script>
     <script src="/js/index.js"></script>
+    <script src="/js/style.js"></script>
   </head>
   <body>
     <div id="outer">
-        <form id="post-form" action="">
-          <input id="tags" autocomplete="off" /><button>Clink!</button>
-        </form>
+        <div id="upper">
+        </div>
 
-        <form id="query-form" action="">
-          <input id="query" autocomplete="off" alt=""/><button>Search</button>
-        </form>
+        <div id="middle">
+            <div id="form-div">
+                <form id="post-form" action="">
+                    <input id="tags" placeholder="Share with key" autocomplete="off" />
+                    <i class="material-icons" id="tagsIcon">send</i>
+                </form>
+                <form id="query-form" action="">
+                    <input id="query" placeholder="Search by key" autocomplete="off" alt=""/>
+                    <i class="material-icons" id="queryIcon">search</i>
+                </form>
+            </div>
+        </div>
 
-        <ul id="linklist"></ul>
+        <div id="lower">
+            <ul id="linklist"></ul>
+        </div>
+
     </div>
   </body>
 </html>
