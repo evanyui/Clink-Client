@@ -17,11 +17,11 @@ i {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
 }
 
 #upper {
-    background-color: #FFA000;
+    background-color: #FFB347;
     position: relative;
     display: inline-block;
     width: 100%;
