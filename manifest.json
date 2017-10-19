@@ -5,6 +5,9 @@
     "version": "1.0",
     "manifest_version": 2,
     "permissions": [
+        "https://*/*",
+        "http://*/*",
+        "tabs",
         "activeTab"
     ],
 
@@ -35,7 +38,7 @@
         "js": ["popup/popup.js"],
         "matches": ["*://*/*"],
         "run_at": "document_end",
-        "all_frames": true
+        "all_frames": false
     }],
 
     "web_accessible_resources": ["js/*.js", "html/*.html", "css/*.css"]
