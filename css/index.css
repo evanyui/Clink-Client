@@ -5,7 +5,7 @@
 }
 
 body {
-    font: 16px Helvetica, Arial; 
+    font: 14px Helvetica, Arial; 
 }
 
 i {
@@ -31,12 +31,22 @@ i {
     box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
 }
 
+#logo {
+    display: block;
+    position: relative;
+    max-width:42%;
+    max-height:42%;
+    width: auto;
+    height: auto;
+    margin: 5% auto;
+}
+
 #middle {
     background: none;
     position: absolute;
     width: 100%;
-    height: 56px;
-    top: calc(25% - 28px);
+    height: 64px;
+    top: calc(25% - 32px);
     padding: 5%;
     vertical-align: middle;
 }
@@ -61,6 +71,7 @@ i {
     border-radius: 100px;
     -webkit-transition: width .30s;
     transition: width .3s;
+
 }
 
 #post-form {
@@ -83,6 +94,7 @@ i {
     text-align: center;
     outline: none;
     background-color: white;
+    font-size: 12px;
 }
 
 #post-form > input {
@@ -103,7 +115,7 @@ i {
     background-color: white;
     line-height: 200%;
     vertical-align: middle;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 #tagsIcon {

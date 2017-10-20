@@ -1,5 +1,5 @@
 (function() {
-    const openWidth = "300px";
+    const openWidth = "350px";
 
     var url = window.location.href;
     var clink = document.getElementById('Clink!');
