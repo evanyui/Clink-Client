@@ -49,7 +49,7 @@
                 "width: 0px;" + 
                 "height: 100% !important;" + 
                 "opacity: 1;" + 
-                "box-shadow: -2px 0px 20px rgba(0, 0, 0, .5);" +
+                "box-shadow: -1px 0px 16px rgba(22, 22, 22, .6);" +
                 "transition: 0.3s";
 
         clink.append(iframe); 

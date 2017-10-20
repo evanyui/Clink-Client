@@ -1,4 +1,7 @@
 $(function() {
+    // Auth for apis
+    var AUTH_THUM = '847-woojung0802'; 
+    
     // When user clink is opened, user is connected to the server
     var socket = io.connect('https://10.0.0.132:3000');
 
@@ -50,10 +53,12 @@ $(function() {
     // Query results are sent back in array
     socket.on('receive', (results) => {
         results.forEach((res) => {
+            var screenshot = '//image.thum.io/get/width/400/crop/900/auth/' + AUTH_THUM + '/' + res.url;
             $('#linklist').append(
                 $('<li/>').append(
                     $('<a/>').attr({href: res.url, target: '_blank'})
-                    .text(res.key)));
+                    // .text(res.key)
+                    .css('background-image', 'url(' + screenshot + ')')));
         });
     });
 

@@ -26,23 +26,29 @@ $(function() {
         $('#query-form > input').blur();
     });
 
-    // $('#post-form > input').hover(
-    //     function() {
-    //         showPost();
-    //     },
-    //     function() {
-    //         recover();
-    //     }
-    // );
+    $('#post-form > input').hover(
+        function() {
+            showPost();
+        },
+        function() {
+            if($('#query-form > input').is(':focus'))
+                showQuery();
+            else if(!$('#post-form > input').is(':focus'))
+                recover();
+        }
+    );
 
-    // $('#query-form > input').hover(
-    //     function() {
-    //         showQuery();
-    //     },
-    //     function() {
-    //         recover();
-    //     }
-    // );
+    $('#query-form > input').hover(
+        function() {
+            showQuery();
+        },
+        function() {
+            if($('#post-form > input').is(':focus'))
+                showPost();
+            else if(!$('#query-form > input').is(':focus'))
+                recover();
+        }
+    );
 
     $('#close').click(function() {
         parent.closeIFrame();
