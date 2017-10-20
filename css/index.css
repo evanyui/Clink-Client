@@ -29,6 +29,7 @@ i {
     padding: 5%;
     margin: 0;
     box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
 }
 
 #logo {
@@ -39,6 +40,20 @@ i {
     width: auto;
     height: auto;
     margin: 5% auto;
+}
+
+#current-tab {
+    display: block;
+    position: relative;
+    margin: auto;
+    margin-bottom: 5%;
+    text-align: center;
+    overflow: hidden;
+    max-width: 80%;
+    max-height: auto;
+    width: auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 #middle {
@@ -71,7 +86,7 @@ i {
     border-radius: 100px;
     -webkit-transition: width .30s;
     transition: width .3s;
-
+    background-color: white;
 }
 
 #post-form {
@@ -93,7 +108,6 @@ i {
     border: none;
     text-align: center;
     outline: none;
-    background-color: white;
     font-size: 12px;
 }
 
@@ -106,16 +120,14 @@ i {
 }
 
 #tagsIcon, #queryIcon {
-    height: 100%;
+    height: auto;
     width: 15%;
     padding: 0;
-    margin: 0;
     display: inline-block;
     position: absolute;
-    background-color: white;
-    line-height: 200%;
     vertical-align: middle;
-    font-size: 14px;
+    font-size: 18px;
+    top: calc(50% - 9px);
 }
 
 #tagsIcon {

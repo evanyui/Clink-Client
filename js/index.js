@@ -5,6 +5,7 @@ $(function() {
     // Get current tab
     // tab address is already left in the name attribute of parent iframe
     var url = window.name;
+    $('#current-tab').text(url);
 
     // When user submit form to post link
     $('#post-form').on('submit', function(event) {
