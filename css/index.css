@@ -26,9 +26,9 @@ i {
     display: inline-block;
     width: 100%;
     height: 25%;
-    padding: 5%;
+    padding: 5% 10%;
     margin: 0;
-    box-shadow: 0px 1px 4px rgba(25,25,25,0.4);
+    box-shadow: 0px 2px 4px rgba(25,25,25,0.3);
     overflow: hidden;
 }
 
@@ -39,22 +39,46 @@ i {
     max-height:42%;
     width: auto;
     height: auto;
-    margin: 5% auto;
+    margin: 8% auto;
+}
+
+#tab {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: auto;
+    margin-bottom: 5%;
+    margin-top: 10%;
+    text-align: center;
 }
 
 #current-tab {
-    display: block;
+    display: inline-block;
     position: relative;
-    margin: auto;
-    margin-bottom: 5%;
     text-align: center;
-    overflow: hidden;
-    max-width: 80%;
-    max-height: auto;
+    overflow-y: visible;
+    overflow-x: hidden;
     width: auto;
+    height: 100%;
+    max-width: 90%;
+    max-height: auto;
     white-space: nowrap;
     text-overflow: ellipsis;
     color: rgba(20,20,20,0.6);
+    font-family: 'Open Sans Light', sans-serif;
+    font-style: italic;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+#tab > i {
+    display: inline-block;
+    position: relative;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+    color: rgba(20,20,20,0.6);
+    font-size: 14px;
 }
 
 #middle {
@@ -74,8 +98,21 @@ i {
     width: 100%;
     border-radius: 100px;
     overflow: hidden;
-    box-shadow: 0px 1px 4px rgba(25,25,25,0.4);
+    /* box-shadow: 0px 1px 4px rgba(25,25,25,0.4); */
 }
+
+#form-div-shadow {
+    position: absolute;
+    height: calc(64px - 5%);
+    width: 90%;
+    top: calc(25% - calc(calc(64px - 5%) / 2));
+    left: 5%;
+    vertical-align: middle;
+    border-radius: 100px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(25,25,25,0.3);
+}
+
 
 #post-form, #query-form {
     position: absolute;
@@ -87,6 +124,7 @@ i {
     background-color: white;
     border: 0.5px;
     border-color: rgba(30,30,30,0.2);
+    font-family: 'Open Sans Light', sans-serif;
 }
 
 #post-form {
@@ -164,7 +202,7 @@ i {
     height: 30%;
     width: auto;
     border-radius: 3px;
-    box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
     text-align: center;
     transition: 0.1s;
     -webkit-transition: 0.1s;
@@ -183,6 +221,6 @@ i {
 #linklist li:hover {
     height: 31%;
     margin: 0 4% 3% 4%;
-    box-shadow: 0px 4px 14px rgba(0,0,0,0.3);
+    box-shadow: 0px 4px 10px rgba(25,25,25,0.3);
 }
 

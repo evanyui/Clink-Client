@@ -21,12 +21,21 @@
 
     //required
     "browser_action": {
-        "default_title": "browser_action: default_title",
+        "default_title": "Open Clink!",
         "default_icon": {
             "19": "images/icon_19.png",
             "38": "images/icon_38.png"
         },
         "default_popup": "popup/popup.html"
+    },
+
+    "commands": {
+        "_execute_browser_action": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+E"
+            },
+            "description": "Ctrl+Shift+E"
+        }
     },
 
     //additional

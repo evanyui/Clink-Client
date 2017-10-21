@@ -61,14 +61,21 @@ $(function() {
                     // .text(res.key)
                     .css('background-image', 'url(' + screenshot + ')')));
         });
+        $('#post').attr('placeholder', 'Shared!');
     });
 
     socket.on('subscribe_callback', (room) => {
         $('#query').attr('alt', room);
+
+        // Show joined room in placeholder
+        $('#query').attr('placeholder', 'Results of \'' + room + '\' ');
     });
 
     socket.on('unsubscribe_callback', (room) => {
         $('#query').attr('alt', "");
+
+        // Show default placeholder
+        $('#query').attr('placeholder', 'Search');
     });
 
     // Join room function
@@ -80,9 +87,6 @@ $(function() {
         }
         $('#linklist').empty();
         socket.emit('subscribe', room);
-
-        // Show joined room in placeholder
-        $('#query').attr('placeholder', 'Results of ' + room);
     }
 
 });

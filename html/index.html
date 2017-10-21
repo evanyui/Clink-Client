@@ -3,6 +3,7 @@
   <head>
     <title>Clink</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="/css/index.css"></link>
     <script src="/js/socket.io.js"></script>
     <script src="/js/jquery-1.11.1.js"></script>
@@ -11,16 +12,20 @@
   </head>
   <body>
     <div id="outer">
+        <div id="form-div-shadow"></div>
         <div id="upper">
             <img id="logo" src="../images/clink_banner.png"/>
-            <p id="current-tab"></p>
+            <div id="tab">
+                <i class="material-icons" id="tagIcon">link</i>
+                <p class="material-icons" id="current-tab"></p>
+            </div>
         </div>
 
         <div id="middle">
             <div id="form-div">
                 <form id="post-form" action="">
                     <input id="tag" placeholder="Key" autocomplete="off" />
-                    <i class="material-icons" id="tagIcon">send</i>
+                    <i class="material-icons" id="tagIcon">create</i>
                 </form>
                 <form id="query-form" action="">
                     <input id="query" placeholder="Search" autocomplete="off" alt=""/>
