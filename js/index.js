@@ -3,7 +3,7 @@ $(function() {
     var AUTH_THUM = '847-woojung0802'; 
     
     // When user clink is opened, user is connected to the server
-    var socket = io.connect('https://10.0.0.132:3000');
+    var socket = io.connect('https://localhost:3000');
 
     // Get current tab
     // tab address is already left in the name attribute of parent iframe
@@ -19,15 +19,16 @@ $(function() {
         // Send tab's address with the tag as a pair to the server
         if(isValidURL(url)) {
             // Create the room first to see the emitted msg back after post
-            joinRoom($('#tags').val());
-            socket.emit('post', $('#tags').val(), url);
+            var tag = $('#tag').val();
+            joinRoom(tag);
+            socket.emit('post', tag, url);
         } else {
             //TODO: need better way to present info message
-            $('#tags').attr('placeholder', 'Current tab is not an url'); 
+            $('#tag').attr('placeholder', 'Current tab is not an url'); 
         }
 
         // Empty the textfield
-        $('#tags').val('');
+        $('#tag').val('');
 
         return false;
     });

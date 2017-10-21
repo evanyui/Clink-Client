@@ -119,7 +119,7 @@ i {
     right: 15%;
 }
 
-#tagsIcon, #queryIcon {
+#tagIcon, #queryIcon {
     height: auto;
     width: 15%;
     padding: 0;
@@ -130,7 +130,7 @@ i {
     top: calc(50% - 9px);
 }
 
-#tagsIcon {
+#tagIcon {
     left:0;
 }
 
