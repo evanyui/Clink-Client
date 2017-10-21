@@ -82,7 +82,7 @@ $(function() {
         socket.emit('subscribe', room);
 
         // Show joined room in placeholder
-        $('#query').attr('placeholder', room);
+        $('#query').attr('placeholder', 'Results of ' + room);
     }
 
 });
