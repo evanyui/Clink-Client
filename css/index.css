@@ -204,7 +204,7 @@ i {
     height: 30%;
     width: auto;
     border-radius: 3px;
-    box-shadow: 0px 1px 2px 1px rgba(25,25,25,0.2);
+    box-shadow: 0px 1px 2px rgba(25,25,25,0.3);
     text-align: center;
     transition: 0.1s;
     -webkit-transition: 0.1s;
@@ -223,6 +223,6 @@ i {
 #linklist li:hover {
     height: 31%;
     margin: 0 4% 3% 4%;
-    box-shadow: 0px 4px 10px 1px rgba(25,25,25,0.3);
+    box-shadow: 0px 4px 10px rgba(25,25,25,0.3);
 }
 
