@@ -49,6 +49,15 @@ $(function() {
     //             recover();
     //     }
     // );
+    //
+
+    $('#post-form').click(function() {
+        $('#post-form > input').focus();
+    });
+
+    $('#query-form').click(function() {
+        $('#query-form > input').focus();
+    });
 
     $('#close').click(function() {
         parent.closeIFrame();
