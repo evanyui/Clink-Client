@@ -58,7 +58,6 @@ $(function() {
             $('#linklist').append(
                 $('<li/>').append(
                     $('<a/>').attr({href: res.url, target: '_blank'})
-                    // .text(res.key)
                     .css('background-image', 'url(' + screenshot + ')')));
         });
         $('#post').attr('placeholder', 'Shared!');
@@ -76,6 +75,10 @@ $(function() {
 
         // Show default placeholder
         $('#query').attr('placeholder', 'Search');
+    });
+
+    socket.on('joinRoom', (room) => {
+        joinRoom(room);
     });
 
     // Join room function
