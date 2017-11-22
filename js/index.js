@@ -3,7 +3,7 @@ $(function() {
     var AUTH_THUM = '847-woojung0802'; 
     
     // When user clink is opened, user is connected to the server
-    var socket = io.connect('https://localhost:3000');
+    var socket = io.connect('https://10.0.0.132:3000');
 
     // Get current tab
     // tab address is already left in the name attribute of parent iframe
@@ -58,7 +58,9 @@ $(function() {
             $('#linklist').append(
                 $('<li/>').append(
                     $('<a/>').attr({href: res.url, target: '_blank'})
-                    .css('background-image', 'url(' + screenshot + ')')));
+                    .css('background-image', 'url(' + screenshot + ')').append(
+                        $('<div/>').append(
+                            $('<p/>').text(res.url)))));
         });
         $('#post').attr('placeholder', 'Shared!');
     });
