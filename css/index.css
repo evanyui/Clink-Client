@@ -225,6 +225,7 @@ i {
 }
 
 #linklist > li > a > div {
+    display: table;
     width: 100%;
     height: 100%;
     visibility: hidden;
@@ -235,6 +236,7 @@ i {
 }
 
 #linklist > li > a > div > p {
+    display: table-cell;
     padding: 2%;
     visibility: hidden;
     color: rgba(255,255,255,0.6);
