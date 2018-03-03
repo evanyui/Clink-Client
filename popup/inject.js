@@ -26,7 +26,7 @@
         });
 
         var iframe = document.createElement('iframe');
-        iframe.src = "https://localhost:3000/popup";
+        iframe.src = "https://34.213.81.60/popup";
         iframe.name = url;
         iframe.style.cssText = 
                 "position: absolute;" +
