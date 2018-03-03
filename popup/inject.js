@@ -25,7 +25,7 @@
             closeClink();
         });
 
-        var iframe = document.createElement('iframe');
+        var iframe = document.createElement('embed');
         iframe.src = "https://www.clink.live/popup";
         iframe.name = url;
         iframe.style.cssText = 
