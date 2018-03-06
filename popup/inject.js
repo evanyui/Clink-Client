@@ -62,6 +62,12 @@
                 closeClink();
             }
         });
+        document.addEventListener("mousewheel", function(event) {
+            var notClink = !clink.contains(event.target);
+            if(notClink) {
+                closeClink();
+            }
+        });
     } 
 
     var opened = clink.style.width !== "0px";
