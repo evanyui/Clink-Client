@@ -263,7 +263,7 @@ i {
 
 #linklist > li:hover > a > div {
     visibility: visible;
-    background-color: rgba(20,20,20,0.6);
+    background-color: rgba(20,20,20,0.5);
     transition: 0.1s;
     -webkit-transition: 0.1s;
 }
