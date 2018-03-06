@@ -1,4 +1,14 @@
 (function() {
+    var jquery = document.createElement('script');
+    jquery.src = 'https://code.jquery.com/jquery-1.11.0.min.js';
+    jquery.type = 'text/javascript';
+    document.body.prepend(jquery);
+    // Adding material icons
+    var materialIcons = document.createElement('link');
+    materialIcons.rel = "stylesheet";
+    materialIcons.href= "https://fonts.googleapis.com/icon?family=Material+Icons";
+    document.body.prepend(materialIcons);
+
     const openWidth = "350px";
 
     var url = window.location.href;
@@ -7,21 +17,21 @@
     if(!created) { 
         var cross = document.createElement('i');
         cross.id = "close-clink";
-        cross.innerHTML = "forward";
+        cross.innerHTML = "exit_to_app";
         cross.className = "material-icons";
         cross.style.cssText =
             "position: relative;" +
             "top: 1%;" +
-            "right: 0;" +
+            "left: 8px;" +
             "margin: 0; " +
-            "margin-right: 94%; " +
+            "margin-right: 95%; " +
             "padding: 0; !important" +
             "border: none; !important" +
             "background-color: none; !important" +
             "color: rgba(0,0,0,0.6); !important" +
             "cursor: auto; !important" +
             "user-select: none;" +
-            "font-size: 14px;" +
+            "font-size: 20px;" +
             "cursor: pointer;";
         cross.addEventListener("click", function() {
             closeClink();
@@ -70,16 +80,6 @@
             }
         });
 
-        // Adding jquery script
-        var jquery = document.createElement('script');
-        jquery.src = 'http://code.jquery.com/jquery-1.11.0.min.js';
-        jquery.type = 'text/javascript';
-        document.body.prepend(jquery);
-        // Adding material icons
-        var materialIcons = document.createElement('link');
-        materialIcons.rel = "stylesheet";
-        materialIcons.href= "https://fonts.googleapis.com/icon?family=Material+Icons";
-        document.body.prepend(materialIcons);
     } 
 
     var opened = clink.style.width !== "0px";
