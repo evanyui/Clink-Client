@@ -7,7 +7,7 @@
     if(!created) { 
         var cross = document.createElement('i');
         cross.id = "close-clink";
-        cross.innerHTML = "&#xE5C8";
+        cross.innerHTML = "forward";
         cross.className = "material-icons";
         cross.style.cssText =
             "position: relative;" +
@@ -27,7 +27,7 @@
             closeClink();
         });
 
-        var iframe = document.createElement('embed');
+        var iframe = document.createElement('iframe');
         iframe.src = "https://www.clink.live/popup";
         iframe.name = url;
         iframe.style.cssText = 
