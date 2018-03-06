@@ -86,7 +86,6 @@ i {
     vertical-align: middle;
     color: rgba(20,20,20,0.6);
     font-size: 14px;
-    font-family: roboto, sans-serif;
 }
 
 #middle {
@@ -133,7 +132,7 @@ i {
     background-color: white;
     border: 0.5px;
     border-color: rgba(30,30,30,0.2);
-    font-family: 'Open Sans Light', sans-serif;
+    font-family: roboto, sans-serif;
 }
 
 #post-form {
