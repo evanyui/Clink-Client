@@ -1,19 +1,30 @@
 (function() {
+    // Adding jquery script 
+    var jquery = document.createElement('script');
+    jquery.src = 'http://code.jquery.com/jquery-1.11.0.min.js';
+    jquery.type = 'text/javascript';
+    document.head.appendChild(jquery);
+
+    var materialIcons = document.createElement('link');
+    materialIcons.rel = "stylesheet";
+    materialIcons.href= "https://fonts.googleapis.com/icon?family=Material+Icons";
+    document.head.appendChild(materialIcons);
+
     const openWidth = "350px";
 
     var url = window.location.href;
     var clink = document.getElementById('Clink!');
     var created = clink != null; 
     if(!created) { 
-        var cross = document.createElement('p');
+        var cross = document.createElement('i');
         cross.id = "close-clink";
-        cross.innerHTML = "&#10006";
+        cross.innerHTML = "&#xE5C8";
         cross.style.cssText =
             "position: relative;" +
             "top: 1%;" +
             "right: 0;" +
             "margin: 0; " +
-            "margin-left: 94%; " +
+            "margin-right: 94%; " +
             "padding: 0; !important" +
             "border: none; !important" +
             "background-color: none; !important" +
