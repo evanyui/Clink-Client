@@ -10,32 +10,31 @@
     document.body.prepend(materialIcons);
 
     const openWidth = "350px";
-
     var url = window.location.href;
     var clink = document.getElementById('Clink!');
     var created = clink != null; 
     if(!created) { 
-        var cross = document.createElement('i');
-        cross.id = "close-clink";
-        cross.innerHTML = "exit_to_app";
-        cross.className = "material-icons";
-        cross.style.cssText =
-            "position: relative;" +
-            "top: 1%;" +
-            "left: 8px;" +
-            "margin: 0; " +
-            "margin-right: 95%; " +
-            "padding: 0; !important" +
-            "border: none; !important" +
-            "background-color: none; !important" +
-            "color: rgba(0,0,0,0.6); !important" +
-            "cursor: auto; !important" +
-            "user-select: none;" +
-            "font-size: 20px;" +
-            "cursor: pointer;";
-        cross.addEventListener("click", function() {
-            closeClink();
-        });
+        // var exit = document.createElement('i');
+        // exit.id = "close-clink";
+        // exit.innerHTML = "exit_to_app";
+        // exit.className = "material-icons";
+        // exit.style.cssText =
+        //     "position: relative;" +
+        //     "top: 1%;" +
+        //     "left: 8px;" +
+        //     "margin: 0; " +
+        //     "margin-right: 95%; " +
+        //     "padding: 0; !important" +
+        //     "border: none; !important" +
+        //     "background-color: none; !important" +
+        //     "color: rgba(0,0,0,0.6); !important" +
+        //     "cursor: auto; !important" +
+        //     "user-select: none;" +
+        //     "font-size: 20px;" +
+        //     "cursor: pointer;";
+        // exit.addEventListener("click", function() {
+        //     closeClink();
+        // });
 
         var iframe = document.createElement('iframe');
         iframe.src = "https://www.clink.live/popup";
@@ -64,8 +63,8 @@
                 "box-shadow: -1px 0px 16px rgba(22, 22, 22, .6);" +
                 "transition: 0.3s";
 
+        // clink.append(exit);
         clink.append(iframe); 
-        clink.append(cross);
         document.body.prepend(clink); 
         document.addEventListener("click", function(event) {
             var notClink = !clink.contains(event.target);
