@@ -3,12 +3,12 @@
     var jquery = document.createElement('script');
     jquery.src = 'http://code.jquery.com/jquery-1.11.0.min.js';
     jquery.type = 'text/javascript';
-    document.appendChild(jquery);
+    document.body.appendChild(jquery);
 
     var materialIcons = document.createElement('link');
     materialIcons.rel = "stylesheet";
     materialIcons.href= "https://fonts.googleapis.com/icon?family=Material+Icons";
-    document.appendChild(materialIcons);
+    document.body.appendChild(materialIcons);
 
     const openWidth = "350px";
 
