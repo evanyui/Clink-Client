@@ -1,9 +1,14 @@
 (function() {
     // Adding jquery script 
-    var script = document.createElement('script');
-    script.src = 'http://code.jquery.com/jquery-1.11.0.min.js';
-    script.type = 'text/javascript';
-    document.getElementsByTagName('head')[0].appendChild(script);
+    var jquery = document.createElement('script');
+    jquery.src = 'http://code.jquery.com/jquery-1.11.0.min.js';
+    jquery.type = 'text/javascript';
+    document.head.appendChild(jquery);
+
+    var materialIcons = document.createElement('link');
+    materialIcons.rel = "stylesheet";
+    materialIcons.href= "https://fonts.googleapis.com/icon?family=Material+Icons";
+    document.head.appendChild(materialIcons);
 
     const openWidth = "350px";
 
@@ -11,15 +16,15 @@
     var clink = document.getElementById('Clink!');
     var created = clink != null; 
     if(!created) { 
-        var cross = document.createElement('p');
+        var cross = document.createElement('i');
         cross.id = "close-clink";
-        cross.innerHTML = "&#10006";
+        cross.innerHTML = "&#xE5C8";
         cross.style.cssText =
             "position: relative;" +
             "top: 1%;" +
             "right: 0;" +
             "margin: 0; " +
-            "margin-left: 94%; " +
+            "margin-right: 94%; " +
             "padding: 0; !important" +
             "border: none; !important" +
             "background-color: none; !important" +
@@ -59,7 +64,6 @@
                 "box-shadow: -1px 0px 16px rgba(22, 22, 22, .6);" +
                 "transition: 0.3s";
 
-        $('#Clink!').load('html/inject.html #test');
         clink.append(iframe); 
         clink.append(cross);
         document.body.prepend(clink); 
