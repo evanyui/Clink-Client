@@ -1,15 +1,4 @@
 (function() {
-    // Adding jquery script 
-    var jquery = document.createElement('script');
-    jquery.src = 'http://code.jquery.com/jquery-1.11.0.min.js';
-    jquery.type = 'text/javascript';
-    document.body.prepend(jquery);
-
-    var materialIcons = document.createElement('link');
-    materialIcons.rel = "stylesheet";
-    materialIcons.href= "https://fonts.googleapis.com/icon?family=Material+Icons";
-    document.body.prepend(materialIcons);
-
     const openWidth = "350px";
 
     var url = window.location.href;
@@ -79,6 +68,17 @@
                 closeClink();
             }
         });
+
+        // Adding jquery script
+        var jquery = document.createElement('script');
+        jquery.src = 'http://code.jquery.com/jquery-1.11.0.min.js';
+        jquery.type = 'text/javascript';
+        document.body.prepend(jquery);
+        // Adding material icons
+        var materialIcons = document.createElement('link');
+        materialIcons.rel = "stylesheet";
+        materialIcons.href= "https://fonts.googleapis.com/icon?family=Material+Icons";
+        document.body.prepend(materialIcons);
     } 
 
     var opened = clink.style.width !== "0px";
