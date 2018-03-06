@@ -20,7 +20,7 @@
             "color: rgba(0,0,0,0.6); !important" +
             "cursor: auto; !important" +
             "user-select: none;" +
-            "font-size: 18;" +
+            "font-size: 14px;" +
             "cursor: pointer;";
         cross.addEventListener("click", function() {
             closeClink();
