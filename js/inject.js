@@ -8,6 +8,7 @@
         var cross = document.createElement('i');
         cross.id = "close-clink";
         cross.innerHTML = "&#xE5C8";
+        cross.class = "material-icons";
         cross.style.cssText =
             "position: relative;" +
             "top: 1%;" +
