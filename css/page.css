@@ -73,7 +73,7 @@ i {
     text-overflow: ellipsis;
     color: rgba(20,20,20,0.6);
     font-family: 'Open Sans Light', sans-serif;
-    font-style: italic;
+    /* font-style: italic; */
     font-size: 12px;
     vertical-align: middle;
 }
@@ -86,6 +86,7 @@ i {
     vertical-align: middle;
     color: rgba(20,20,20,0.6);
     font-size: 14px;
+    font-family: roboto, sans-serif;
 }
 
 #middle {
@@ -252,7 +253,6 @@ i {
     text-overflow: ellipsis;
     transition: 0.1s;
     -webkit-transition: 0.1s;
-
 }
 
 #linklist li:hover {
@@ -263,7 +263,7 @@ i {
 
 #linklist > li:hover > a > div {
     visibility: visible;
-    background-color: rgba(20,20,20,0.6);
+    background-color: rgba(20,20,20,0.5);
     transition: 0.1s;
     -webkit-transition: 0.1s;
 }
