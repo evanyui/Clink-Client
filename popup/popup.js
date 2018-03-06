@@ -5,4 +5,4 @@ chrome.tabs.executeScript(
 );
 
 // If debugging with logging, comment out this line
-window.close();
+// window.close();
