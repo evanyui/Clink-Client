@@ -1,10 +1,4 @@
 (function() {
-    // Adding jquery script 
-    var script = document.createElement('script');
-    script.src = 'http://code.jquery.com/jquery-1.11.0.min.js';
-    script.type = 'text/javascript';
-    document.getElementsByTagName('head')[0].appendChild(script);
-
     const openWidth = "350px";
 
     var url = window.location.href;
@@ -59,9 +53,6 @@
                 "box-shadow: -1px 0px 16px rgba(22, 22, 22, .6);" +
                 "transition: 0.3s";
 
-        var test = document.createElement('div');
-        test.id = 'test';
-        $('#test').load('html/inject.html #test');
         clink.append(iframe); 
         clink.append(cross);
         document.body.prepend(clink); 
