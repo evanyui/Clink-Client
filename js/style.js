@@ -65,24 +65,24 @@ $(function() {
 
     $('#form-div').hover(function() {
         $('#form-div-shadow').animate({
-            boxShadow: "2px 6px 6px rgba(25,25,25,0.4)"
+            box-shadow: "2px 6px 6px rgba(25,25,25,0.4)"
         }, 100, function() {
         });
     }, function() {
         $('#form-div-shadow').animate({
-            boxShadow: "0px 2px 4px rgba(25,25,25,0.4)"
+            box-shadow: "0px 2px 4px rgba(25,25,25,0.4)"
         }, 100, function() {
         });
     });
     $('#form-div').focus(function() {
         $('#form-div-shadow').animate({
-            boxShadow: "2px 6px 6px rgba(25,25,25,0.4)"
+            box-shadow: "2px 6px 6px rgba(25,25,25,0.4)"
         }, 100, function() {
         });
     });
     $('#form-div').focusout(function() {
         $('#form-div-shadow').animate({
-            boxShadow: "0px 2px 4px rgba(25,25,25,0.4)"
+            box-shadow: "0px 2px 4px rgba(25,25,25,0.4)"
         }, 100, function() {
         });
     });
