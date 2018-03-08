@@ -63,7 +63,10 @@ $(function() {
     });
 
     $('#post-form').on('submit', function(event) {
-        rotate(360);
+        rotate(720);
+    });
+    $('#query-form').on('submit', function(event) {
+        rotate(720);
     });
 });
 
