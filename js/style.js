@@ -66,7 +66,7 @@ $(function() {
         rotate(720);
     });
     $('#query-form').on('submit', function(event) {
-        rotate(720);
+        rotate(360);
     });
 });
 
