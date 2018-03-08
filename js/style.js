@@ -92,6 +92,7 @@ var hide = function() {
     $('#middle').css('top', 'calc(5% - 33px)');
     $('#form-div-shadow').css('top', 'calc(5% - calc(calc(66px - 5%) / 2))');
     $('#lower').css('height', '90%');
+    $('#logo').hide();
 }
 
 var show = function() {
@@ -99,4 +100,5 @@ var show = function() {
     $('#middle').css('top', 'calc(15% - 33px)');
     $('#form-div-shadow').css('top', 'calc(15% - calc(calc(66px - 5%) / 2))');
     $('#lower').css('height', '80%');
+    $('#logo').show();
 }
