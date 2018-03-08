@@ -1,7 +1,7 @@
 $(function() {
 
     $('#post-form > input').focus(function() {
-        show('75%', '25%');
+        show('80%', '20%');
     });
 
     $('#post-form > input').focusout(function() {
@@ -9,7 +9,7 @@ $(function() {
     });
 
     $('#query-form > input').focus(function() {
-        show('25%', '75%');
+        show('20%', '80%');
     });
 
     $('#query-form > input').focusout(function() {
