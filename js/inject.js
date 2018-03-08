@@ -14,6 +14,14 @@
     var clink = document.getElementById('Clink!');
     var created = clink != null; 
     if(!created) { 
+        var layer = document.createElement('div');
+        layer.style.cssText = 
+                "position: absolute;" +
+                "top: 0;" +
+                "left: 0;" +
+                "width: 100%;" +
+                "height: 100%;" + 
+                "background-color: rgba(25,25,25,0.8);";
         // var exit = document.createElement('i');
         // exit.id = "close-clink";
         // exit.innerHTML = "exit_to_app";
@@ -66,6 +74,7 @@
         // clink.append(exit);
         clink.append(iframe); 
         document.body.prepend(clink); 
+        document.body.prepend(layer);
         document.addEventListener("click", function(event) {
             var notClink = !clink.contains(event.target);
             if(notClink) {
