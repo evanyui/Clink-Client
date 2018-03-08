@@ -26,12 +26,12 @@ i {
 
 #upper {
     background: #ffb347;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #ffcc33, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #ffcc33, #ffb347); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to bottom, #fecf40, #f69110);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #fecf40, #f69110); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     position: relative;
     display: inline-block;
     width: 100%;
-    height: 20%;
+    height: 15%;
     padding: 2% 10%;
     margin: 0;
     box-shadow: 0px 2px 4px rgba(25,25,25,0.4);
@@ -42,50 +42,11 @@ i {
 #logo {
     display: block;
     position: relative;
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 60%;
+    max-height: 60%;
     width: auto;
     height: auto;
     margin: 5% auto;
-}
-
-#tab {
-    position: relative;
-    width: auto;
-    height: auto;
-    margin: auto;
-    margin-bottom: 5%;
-    margin-top: 5%;
-    text-align: center;
-}
-
-#current-tab {
-    display: inline-block;
-    position: relative;
-    text-align: center;
-    overflow-y: visible;
-    overflow-x: hidden;
-    width: auto;
-    height: 100%;
-    max-width: 90%;
-    max-height: auto;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    color: rgba(20,20,20,0.6);
-    font-family: 'Open Sans Light', sans-serif;
-    /* font-style: italic; */
-    font-size: 12px;
-    vertical-align: middle;
-}
-
-#tab > i {
-    display: inline-block;
-    position: relative;
-    width: auto;
-    height: auto;
-    vertical-align: middle;
-    color: rgba(20,20,20,0.6);
-    font-size: 14px;
 }
 
 #middle {
@@ -93,7 +54,7 @@ i {
     position: absolute;
     width: 100%;
     height: 66px;
-    top: calc(20% - 33px);
+    top: calc(15% - 33px);
     padding: 5%;
     vertical-align: middle;
     z-index: 999;
@@ -112,7 +73,7 @@ i {
     position: absolute;
     height: calc(66px - 5%);
     width: 90%;
-    top: calc(20% - calc(calc(66px - 5%) / 2));
+    top: calc(15% - calc(calc(66px - 5%) / 2));
     left: 5%;
     vertical-align: middle;
     border-radius: 100px;
@@ -271,6 +232,60 @@ i {
     visibility: visible;
     transition: 0.1s;
     -webkit-transition: 0.1s;
+}
+
+#footer {
+    background: #ffb347;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #fecf40, #f69110);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #fecf40, #f69110); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 5%;
+    padding: 2% 10%;
+    margin: 0;
+    box-shadow: 0px 2px 4px rgba(25,25,25,0.4);
+    overflow: hidden;
+    z-index: 2;
+}
+
+#tab {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: auto;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    text-align: center;
+}
+
+#current-tab {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    overflow-y: visible;
+    overflow-x: hidden;
+    width: auto;
+    height: 100%;
+    max-width: 90%;
+    max-height: auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: rgba(20,20,20,0.6);
+    font-family: 'Open Sans Light', sans-serif;
+    /* font-style: italic; */
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+#tab > i {
+    display: inline-block;
+    position: relative;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+    color: rgba(20,20,20,0.6);
+    font-size: 14px;
 }
 
 
