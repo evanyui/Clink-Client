@@ -12,15 +12,16 @@
     const openWidth = "350px";
     var url = window.location.href;
     var clink = document.getElementById('Clink!');
+    var layer = document.createElement('div');
     var created = clink != null; 
     if(!created) { 
-        var layer = document.createElement('div');
         layer.style.cssText = 
-                "position: absolute;" +
-                "top: 0;" +
+                "z-index: 2147483647;" +
+                "position: fixed; !important" + 
+                "top: 0;" + 
                 "left: 0;" +
-                "width: 100%;" +
-                "height: 100%;" + 
+                "width: 100%; !important" +
+                "height: 100%; !important" + 
                 "background-color: rgba(25,25,25,0.8);";
         // var exit = document.createElement('i');
         // exit.id = "close-clink";
@@ -73,8 +74,8 @@
 
         // clink.append(exit);
         clink.append(iframe); 
-        document.body.prepend(clink); 
         document.body.prepend(layer);
+        document.body.prepend(clink); 
         document.addEventListener("click", function(event) {
             var notClink = !clink.contains(event.target);
             if(notClink) {
@@ -106,6 +107,7 @@
         setTimeout(() => {
             clink.outerHTML = "";
             delete clink;
+            delete layer;
         }, 300);
     };
 
