@@ -26,7 +26,7 @@ $(function() {
         $('#query-form > input').blur();
     });
 
-    $('#post-form > input').hover(
+    $('#post-form').hover(
         function() {
             show('60%', '40%');
         },
@@ -38,7 +38,7 @@ $(function() {
         }
     );
 
-    $('#query-form > input').hover(
+    $('#query-form').hover(
         function() {
             show('40%', '60%');
         },
