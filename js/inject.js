@@ -69,7 +69,7 @@
                 "width: 0px;" + 
                 "height: 100% !important;" + 
                 "opacity: 1;" + 
-                "box-shadow: -1px 0px 16px rgba(22, 22, 22, .6);" +
+                "box-shadow: -6px 0px 16px rgba(22, 22, 22, .6);" +
                 "transition: 0.3s";
 
         // clink.append(exit);
