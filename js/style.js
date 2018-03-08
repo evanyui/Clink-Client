@@ -64,10 +64,11 @@ $(function() {
 
     $('#post-form').on('submit', function(event) {
         rotate(720);
-
+        hide();
     });
     $('#query-form').on('submit', function(event) {
         rotate(720);
+        hide();
     });
 });
 
