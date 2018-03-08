@@ -49,7 +49,6 @@ $(function() {
                 show('50%', '50%');
         }
     );
-    
 
     $('#post-form').click(function() {
         $('#post-form > input').focus();
@@ -63,9 +62,22 @@ $(function() {
         parent.closeIFrame();
     });
 
+    $('#post-form').on('submit', function(event) {
+        rotate(360);
+    });
 });
 
 var show = function(postw, queryw) {
     $('#post-form').css('width', postw);
     $('#query-form').css('width', queryw);
 };
+
+var rotate = function(d) {
+    $({deg: 0}).animate({deg: d}, {
+        step: function(now, fx){
+            $("#logo").css({
+                 transform: "rotate(" + now + "deg)"
+            });
+        }
+    });
+}
