@@ -12,9 +12,11 @@
     const openWidth = "350px";
     var url = window.location.href;
     var clink = document.getElementById('Clink!');
-    var layer = document.createElement('div');
+    var layer = document.getElementById('clink_layer') == null? 
+        document.createElement('div') : document.getElementById('clink_layer');
     var created = clink != null; 
     if(!created) { 
+        layer.id = "clink_layer";
         layer.style.cssText = 
                 "z-index: 2147483646;" +
                 "position: fixed; !important;" + 
