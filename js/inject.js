@@ -22,7 +22,7 @@
                 "left: 0;" +
                 "width: 100%; !important;" +
                 "height: 100%; !important;" + 
-                "background-color: rgba(25,25,25,0.7);";
+                "background-color: rgba(25,25,25,0.8);";
         // var exit = document.createElement('i');
         // exit.id = "close-clink";
         // exit.innerHTML = "exit_to_app";
