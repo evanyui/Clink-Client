@@ -107,6 +107,7 @@
         setTimeout(() => {
             clink.outerHTML = "";
             delete clink;
+            layer.outerHTML = "";
             delete layer;
         }, 300);
     };
