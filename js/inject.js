@@ -16,12 +16,12 @@
     var created = clink != null; 
     if(!created) { 
         layer.style.cssText = 
-                "z-index: 2147483647;" +
-                "position: fixed; !important" + 
+                "z-index: 2147483646;" +
+                "position: fixed; !important;" + 
                 "top: 0;" + 
                 "left: 0;" +
-                "width: 100%; !important" +
-                "height: 100%; !important" + 
+                "width: 100%; !important;" +
+                "height: 100%; !important;" + 
                 "background-color: rgba(25,25,25,0.8);";
         // var exit = document.createElement('i');
         // exit.id = "close-clink";
@@ -56,7 +56,7 @@
                 "height: 100%;" + 
                 "overflow: hidden;" +
                 "border: none;" +
-                "background-color: white;";
+                "background-color: transparent;";
 
         clink = document.createElement('div');
         clink.id = "Clink!";
