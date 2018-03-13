@@ -4,7 +4,7 @@ chrome.tabs.executeScript(
     {file: "/js/inject.js"},
     function(results) {
         if (results==null)
-            chrome.tabs.create({url:"https://www.clink.live/"});
+            chrome.tabs.update({url:"https://www.clink.live/"});
     }
 );
 
