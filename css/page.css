@@ -92,12 +92,11 @@ i {
     -webkit-transition: 0.3s;
 }
 
-
-#post-form, #query-form {
+#query-form {
     position: absolute;
     display: inline;
     height: 100%;
-    width: 50%;
+    width: 100%;
     -webkit-transition: width .3s;
     transition: width .3s;
     background-color: white;
