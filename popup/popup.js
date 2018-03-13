@@ -1,7 +1,11 @@
 // Send script to current page
 chrome.tabs.executeScript(
     null, 
-    {file: "/js/inject.js"}
+    {file: "/js/inject.js"},
+    function(results) {
+        if (results==null)
+            chrome.tabs.create({url:"https://www.clink.live/"});
+    }
 );
 
 // chrome.browserAction.onClicked.addListener(function(activeTab){
