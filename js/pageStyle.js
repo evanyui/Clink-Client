@@ -6,18 +6,7 @@ $(function() {
 });
 
 var rotate = function(d) {
-    $({deg: 0}).animate({deg: d}, {
-        step: function(now, fx) {
-            $("#logo").css({
-                 transform: "rotate(" + now + "deg)"
-            });
-        },
-        complete: function() {
-            $("#logo").css({
-                 transform: "rotate(0)"
-            });
-        }
-    });
+    $('#logo').animate({webkitTransform: "rotate(" + d + ")"}); 
 }
 
 // var hide = function() {
