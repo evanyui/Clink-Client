@@ -63,11 +63,9 @@ $(function() {
     });
 
     $('#post-form').on('submit', function(event) {
-        rotate(720);
         hide();
     });
     $('#query-form').on('submit', function(event) {
-        rotate(720);
         hide();
     });
 });
@@ -76,16 +74,6 @@ var adjust = function(postw, queryw) {
     $('#post-form').css('width', postw);
     $('#query-form').css('width', queryw);
 };
-
-var rotate = function(d) {
-    $({deg: 0}).animate({deg: d}, {
-        step: function(now, fx){
-            $("#logo").css({
-                 transform: "rotate(" + now + "deg)"
-            });
-        }
-    });
-}
 
 var hide = function() {
     $('#upper').css('height', '5%');
