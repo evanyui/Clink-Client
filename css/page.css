@@ -174,7 +174,8 @@ i {
     text-align: center;
     transition: 0.1s;
     -webkit-transition: 0.1s;
-    overflow: hidden
+    overflow: hidden;
+    display: inline-block;
 }
 
 #linklist > li > a {
