@@ -1,5 +1,4 @@
 $(function() {
-
     $('#post-form > input').focus(function() {
         adjust('80%', '20%');
     });
@@ -81,6 +80,7 @@ var hide = function() {
     $('#form-div-shadow').css('top', 'calc(5% - calc(34px / 2))');
     $('#lower').css('height', '90%');
     $('#logo').hide();
+    $('lower').css('background-image', 'none');
 }
 
 var show = function() {
