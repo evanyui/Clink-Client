@@ -35,12 +35,7 @@ $(function() {
 
     $('#logo.clickable').click(function() {
         // Post with empty tag, random generator handled on server side
-        joinRoom('');
-        socket.emit('post', '', url);
-        // Empty the textfield
-        $('#tag').val('');
-
-        return false;
+        $('#post-form').submit();
     });
 
     // When user submit form to query links
