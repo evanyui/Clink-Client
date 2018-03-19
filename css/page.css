@@ -234,6 +234,13 @@ i {
     -webkit-transition: 0.1s;
 }
 
+#promotion > a {
+    background-image: url('../images/clink_original.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
 #footer {
     background: #ffb347;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #fecf40, #f69110);  /* Chrome 10-25, Safari 5.1-6 */
@@ -285,6 +292,5 @@ i {
     color: rgba(20,20,20,0.6);
     font-size: 14px;
 }
-
 
 
