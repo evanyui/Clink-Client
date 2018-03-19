@@ -1,6 +1,4 @@
 {
-    //manifest spec: http://developer.chrome.com/extensions/manifest.html
-    //required
     "name": "Clink",
     "version": "1.0",
     "manifest_version": 2,
@@ -10,16 +8,12 @@
         "tabs",
         "activeTab"
     ],
-
-    //recommended
-    "description": "Enable user to share and search link with tag query",
+    "description": "Share links easier and more convenient by key",
     "icons": {
         "19": "images/icon_19.png",
         "38": "images/icon_38.png",
         "128": "images/icon_128.png"
     },
-
-    //required
     "browser_action": {
         "default_title": "Open Clink!",
         "default_icon": {
@@ -28,7 +22,6 @@
         },
         "default_popup": "popup/popup.html"
     },
-
     "commands": {
         "_execute_browser_action": {
             "suggested_key": {
@@ -37,18 +30,11 @@
             "description": "Ctrl+Shift+E"
         }
     },
-
-    //additional
-//    "options_page": "html/options.html",
-//    "homepage_url": "http://yourdomainhere.com/"
-    
-    //Dependencies
     "content_scripts": [{
         "js": ["popup/popup.js"],
         "matches": ["*://*/*"],
         "run_at": "document_end",
         "all_frames": false
     }],
-
     "web_accessible_resources": ["js/*.js", "html/*.html", "css/*.css"]
 }
