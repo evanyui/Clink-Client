@@ -217,7 +217,7 @@ i {
 #linklist li:hover {
     height: 36%;
     width: 24%;
-    margin: 0.75% 0.5% 0.75% 0.5%;
+    margin: 0.5% 0.5% 0.5% 0.5%;
     box-shadow: 0px 4px 8px rgba(25,25,25,0.4);
 }
 
