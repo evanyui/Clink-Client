@@ -33,6 +33,16 @@ $(function() {
         return false;
     });
 
+    $('#logo.clickable').click(function() {
+        // Post with empty tag, random generator handled on server side
+        joinRoom('');
+        socket.emit('post', '', url);
+        // Empty the textfield
+        $('#tag').val('');
+
+        return false;
+    });
+
     // When user submit form to query links
     $('#query-form').on('submit', function(event) {
         // TODO: weird bug on html having two submit forms
