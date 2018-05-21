@@ -3,7 +3,7 @@ $(function() {
     var AUTH_THUM = '847-woojung0802'; 
     
     // When user clink is opened, user is connected to the server
-    var socket = io.connect('https://www.clink.live/');
+    var socket = io.connect('http://www.clink.live/');
 
     // Get current tab
     // tab address is already left in the name attribute of parent iframe
