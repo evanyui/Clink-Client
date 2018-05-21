@@ -48,7 +48,7 @@
         // });
 
         var iframe = document.createElement('iframe');
-        iframe.src = "http://www.clink.live/popup";
+        iframe.src = "https://www.clink.live/popup";
         iframe.name = url;
         iframe.style.cssText = 
                 "position: absolute;" +
