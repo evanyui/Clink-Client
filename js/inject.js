@@ -103,15 +103,16 @@
         closeClink();
     }
 
-    // Delete clink element immediately if user closes it
+    // Close clink element immediately if user closes it
     function closeClink() {
         clink.style.width = "0px";
-        setTimeout(() => {
-            clink.outerHTML = "";
-            delete clink;
-            layer.outerHTML = "";
-            delete layer;
-        }, 300);
+        // But don't delete the element
+        // setTimeout(() => {
+        //     clink.outerHTML = "";
+        //     delete clink;
+        //     layer.outerHTML = "";
+        //     delete layer;
+        // }, 300);
     };
 
 })();
